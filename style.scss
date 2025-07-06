@@ -1,0 +1,132 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.center{
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.header{
+  height: 800px;
+}
+.top{
+  background-color: $top-color;
+  padding-top: 196px;
+  padding-bottom: 156px;
+
+  &__heading{
+    color: $base-color;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+    max-width: 768px;
+  }
+
+  &__span{
+    display: block;
+  }
+
+  &__description{
+    color: $base-color;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    max-width: 720px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+      &--bold{
+        font-weight: 600;
+      }
+  }
+
+  &__btn{
+    display: inline-block;
+    padding: 16px 65px;
+    background: $base-color;
+    color: $article-color;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+  }
+
+  &__btn:hover{
+    background-color: $article-color;
+    color: $base-color;
+  }
+}
+
+.running-line{
+  height: 90px;
+  background-color: $light-green-color;
+}
+
+.about{
+  height: 1470px;
+  background-color: $base-color;
+
+  &__heading{
+    color: $article-color;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-top: 94px;
+    margin-bottom: 24px;
+  }
+
+&__description{
+  color: $article-color;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 72px; // Возможно, вызовет увеличение всего блока в высоту
+}
+
+  &__span{
+    display: block;
+  }
+}
+
+.game{
+  display: flex;
+  gap: 32px;
+
+  &__item{
+    background-color: $article-color;
+    border-radius: 30px;
+    width: 378px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img{
+    border-radius: 30px;
+  }
+
+}
+
+.two-games{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

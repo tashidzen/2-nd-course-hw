@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.header {
+  height: 800px;
+}
+
+.top {
+  background-color: #E1FF8F;
+  padding-top: 196px;
+  padding-bottom: 156px;
+}
+.top__heading {
+  color: #202027;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+  text-align: left;
+  max-width: 768px;
+}
+.top__span {
+  display: block;
+}
+.top__description {
+  color: #202027;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  max-width: 720px;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+.top__description--bold {
+  font-weight: 600;
+}
+.top__btn {
+  display: inline-block;
+  padding: 16px 65px;
+  background: #202027;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+}
+.top__btn:hover {
+  background-color: #FFFFFF;
+  color: #202027;
+}
+
+.running-line {
+  height: 90px;
+  background-color: #BCEC30;
+}
+
+.about {
+  height: 1470px;
+  background-color: #202027;
+}
+.about__heading {
+  color: #FFFFFF;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-top: 94px;
+  margin-bottom: 24px;
+}
+.about__description {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 72px;
+}
+.about__span {
+  display: block;
+}
+
+.game {
+  display: flex;
+  gap: 32px;
+}
+.game__item {
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  width: 378px;
+  display: flex;
+  flex-direction: column;
+}
+.game__img {
+  border-radius: 30px;
+}
+
+.two-games {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}/*# sourceMappingURL=style.css.map */

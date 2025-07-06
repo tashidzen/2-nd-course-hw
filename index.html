@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <section class="top center">
+            <h1 class="top__heading">
+                <span class="top__span">Добро пожаловать</span>
+                <span class="top__span">на мой сайт мини-игр</span>
+            </h1>
+            <p class="top__description">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
+                <span class= "top__description top__description--bold">«Поехали!»</span>
+                и 
+                <span class="top__description top__description--bold">приступай</span>
+                .</p>
+            <a href="#about-section" class="top__btn">Поехали!</a>
+        </section>
+        <div class="running-line">
+        </div>
+    </header>
+    <section class="about center">
+        <h1 id="about-section" class="about__heading">Об играх</h1>
+        <p class="about__description">
+            <span class="about__span">В моей коллекции представлено 6 игр на разные темы.</span>
+            <span class="about__span">Игры несложные — в них может поиграть каждый.</span>
+            <span class="about__span">Все игры доступны для пользования.</span>
+        </p>
+        <div class="game">
+            <div class="two-games">
+                <article class="game__item">
+                    <img class="game__img" src="./images/first_game.jpeg" alt="Первая игра">
+                    <span class="game__order">Игра № 1</span>
+                    <h2 class="game__name">Угадай число</h2>
+                </article>
+                <article class="game__item">
+                    <img class="game__img" src="./images/fourth_game.jpeg" alt="Первая игра">
+                    <span class="game__order">Игра № 4</span>
+                    <h2 class="game__name">Камень, ножницы, бумага</h2>
+                </article>
+            </div>
+            <div class="two-games">
+                <article class="game__item">
+                    <img class="game__img" src="./images/second_game.jpeg" alt="Первая игра">
+                    <span class="game__order">Игра № 2</span>
+                    <h2 class="game__name">Простая арифметика</h2>
+                </article>                
+                <article class="game__item">
+                    <img class="game__img" src="./images/fifth_game.jpeg" alt="Первая игра">
+                    <span class="game__order">Игра № 5</span>
+                    <h2 class="game__name">Простая викторина</h2>
+                </article>
+            </div>
+            <div class="two-games">
+                <article class="game__item">
+                    <img class="game__img" src="./images/third_game.jpeg" alt="Первая игра">
+                    <span class="game__order">Игра № 3</span>
+                    <h2 class="game__name">Переверни текст</h2>
+                </article>
+                <article class="game__item">
+                    <img class="game__img" src="./images/sixth_game.jpeg" alt="Первая игра">
+                    <span class="game__order">Игра № 6</span>
+                    <h2 class="game__name">Генератор случайных цветов</h2>
+                </article>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
