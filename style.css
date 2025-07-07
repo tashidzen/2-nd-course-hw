@@ -109,8 +109,44 @@ body {
   display: flex;
   flex-direction: column;
 }
+.game__item--minsize {
+  min-height: 473px;
+}
+.game__item--mediumsize {
+  min-height: 512px;
+}
+.game__item--maxsize {
+  min-height: 551px;
+}
 .game__img {
   border-radius: 30px;
+}
+.game__block {
+  margin: 32px 32px 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+}
+.game__order {
+  box-sizing: border-box;
+  border-radius: 53px;
+  background-color: #F7F7F7;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+  max-width: 111px;
+  padding: 9px 16px;
+  text-align: center;
+}
+.game__test-transfer {
+  display: block;
+}
+.game__name {
+  color: #202027;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
 }
 
 .two-games {
