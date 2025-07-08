@@ -17,9 +17,74 @@ body {
 
 .header{
   height: 800px;
-}
-.top{
   background-color: $top-color;
+  background-image: url(./images/GroupStar.svg);
+  background-position:right;
+  background-repeat:no-repeat;
+  z-index: 1;
+  position: relative;
+
+    &__left-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-repeat: no-repeat;
+    }
+    
+    &::before {
+      background-image: url(./images/LeftColorStar.svg);
+      width: 57px;
+      height: 57px;
+      left: 63px;
+      top: 94px;
+    }
+    
+    &::after {
+      background-image: url(./images/LeftStar.svg);
+      width: 35px;
+      height: 35px;
+      left: 156px;
+      top: 69px;
+    }
+  }
+
+  &__right-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-repeat: no-repeat;
+    }
+    
+    &::before {
+      background-image: url(./images/RightColorStar.svg);
+      width: 37px;
+      height: 37px;
+      left: 948px;
+      top: 538px;
+    }
+    
+    &::after {
+      background-image: url(./images/RightStar.svg);
+      width: 83px;
+      height: 83px;
+      left: 1013px;
+      top: 568px;
+    }
+  }
+}
+
+.top{
+  position: relative;
   padding-top: 196px;
   padding-bottom: 156px;
 
