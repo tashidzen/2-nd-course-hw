@@ -145,6 +145,34 @@ body {
 .about{
   height: 1470px;
   background-color: $base-color;
+  background-image: url(./images/BigStar.svg);
+  background-position:right 111px;
+  background-repeat:no-repeat;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+
+  &::before {
+    background-image: url(./images/MiniStarAboutGames.svg);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    left: 28px;
+    top: 1570px;
+  }
+  
+  &::after {
+    background-image: url(./images/BigStarAboutGames.svg);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    left: 45px;
+    top: 1622px;
+  }
 
   &__heading{
     color: $article-color;
@@ -193,7 +221,12 @@ body {
 
     &--maxsize{
       min-height: 551px;
-    }    
+    }
+  }
+
+  &__item:hover{
+    transition: transform 0.8s;
+    transform: scale(1.1);
   }
 
   &__img{

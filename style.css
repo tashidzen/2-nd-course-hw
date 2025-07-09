@@ -130,6 +130,31 @@ body {
 .about {
   height: 1470px;
   background-color: #202027;
+  background-image: url(./images/BigStar.svg);
+  background-position: right 111px;
+  background-repeat: no-repeat;
+}
+.about::before, .about::after {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: 2;
+}
+.about::before {
+  background-image: url(./images/MiniStarAboutGames.svg);
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  left: 28px;
+  top: 1570px;
+}
+.about::after {
+  background-image: url(./images/BigStarAboutGames.svg);
+  background-repeat: no-repeat;
+  width: 55px;
+  height: 55px;
+  left: 45px;
+  top: 1622px;
 }
 .about__heading {
   color: #FFFFFF;
@@ -173,6 +198,10 @@ body {
 }
 .game__item--maxsize {
   min-height: 551px;
+}
+.game__item:hover {
+  transition: transform 0.8s;
+  transform: scale(1.1);
 }
 .game__img {
   border-radius: 30px;
