@@ -223,6 +223,7 @@ body {
   max-width: 111px;
   padding: 9px 16px;
   text-align: center;
+  color: #202027;
 }
 .game__test-transfer {
   display: block;
