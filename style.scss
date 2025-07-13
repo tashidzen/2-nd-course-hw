@@ -1,0 +1,273 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.center{
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.header{
+  height: 800px;
+  background-color: $top-color;
+  background-image: url(./images/GroupStar.svg);
+  background-position:right;
+  background-repeat:no-repeat;
+  z-index: 1;
+  position: relative;
+
+    &__left-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-repeat: no-repeat;
+    }
+    
+    &::before {
+      background-image: url(./images/LeftColorStar.svg);
+      width: 57px;
+      height: 57px;
+      left: 63px;
+      top: 94px;
+    }
+    
+    &::after {
+      background-image: url(./images/LeftStar.svg);
+      width: 35px;
+      height: 35px;
+      left: 156px;
+      top: 69px;
+    }
+  }
+
+  &__right-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-repeat: no-repeat;
+    }
+    
+    &::before {
+      background-image: url(./images/RightColorStar.svg);
+      width: 37px;
+      height: 37px;
+      left: 948px;
+      top: 538px;
+    }
+    
+    &::after {
+      background-image: url(./images/RightStar.svg);
+      width: 83px;
+      height: 83px;
+      left: 1013px;
+      top: 568px;
+    }
+  }
+}
+
+.top{
+  position: relative;
+  padding-top: 196px;
+  padding-bottom: 156px;
+
+  &__heading{
+    color: $base-color;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+    max-width: 768px;
+  }
+
+  &__span{
+    display: block;
+  }
+
+  &__description{
+    color: $base-color;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    max-width: 720px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+      &--bold{
+        font-weight: 600;
+      }
+  }
+
+  &__btn{
+    display: inline-block;
+    padding: 16px 65px;
+    background: $base-color;
+    color: $article-color;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+  }
+
+  &__btn:hover{
+    background-color: $article-color;
+    color: $base-color;
+  }
+}
+
+.running-line{
+  height: 90px;
+  background-color: $light-green-color;
+}
+
+.about{
+  height: 1470px;
+  background-color: $base-color;
+  background-image: url(./images/BigStar.svg);
+  background-position:right 111px;
+  background-repeat:no-repeat;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 2;
+  }
+
+  &::before {
+    background-image: url(./images/MiniStarAboutGames.svg);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    left: 28px;
+    top: 1570px;
+  }
+  
+  &::after {
+    background-image: url(./images/BigStarAboutGames.svg);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    left: 45px;
+    top: 1622px;
+  }
+
+  &__heading{
+    color: $article-color;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-top: 94px;
+    margin-bottom: 24px;
+  }
+
+&__description{
+  color: $article-color;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 72px; // Возможно, вызовет увеличение всего блока в высоту
+}
+
+  &__span{
+    display: block;
+  }
+}
+
+.game{
+  display: flex;
+  gap: 32px;
+
+  &__item{
+    background-color: $article-color;
+    border-radius: 30px;
+    width: 378px;
+    display: flex;
+    flex-direction: column;
+
+    &--minsize{
+      min-height: 473px;
+    }
+
+    &--mediumsize{
+      min-height: 512px;
+    }
+
+    &--maxsize{
+      min-height: 551px;
+    }
+  }
+
+  &__item:hover{
+    transition: transform 0.8s;
+    transform: scale(1.1);
+  }
+
+  &__img{
+    border-radius: 30px;
+  }
+
+  &__block{
+    margin: 32px 32px 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  &__order{
+    box-sizing: border-box;
+    border-radius: 53px;
+    background-color: #F7F7F7;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 110%;
+    max-width: 111px;
+    padding: 9px 16px;
+    text-align: center;
+    color: $base-color;
+  }
+
+  &__test-transfer{
+    display: block;
+  }
+
+  &__name{
+    color: $base-color;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+  }
+}
+
+.two-games{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
