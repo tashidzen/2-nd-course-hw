@@ -76,6 +76,10 @@
             box-sizing: border-box;
             margin: 0 auto;
         }
+        &__btn:hover{
+            background-color: $base-color;
+            color: $article-color;
+        }
     }
 
     .running-line{
