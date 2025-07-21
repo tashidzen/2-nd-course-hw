@@ -36,7 +36,7 @@
         <div class="game">
             <div class="two-games">
                 <article class="game__item game__item--minsize">
-                    <a href="#"> <!--Дополнить якорную ссылку, когда реализую блок Мини-игр -->
+                    <a href="#game1">
                         <img class="game__img" src="./images/first_game.jpeg" alt="Первая игра">
                         <div class="game__block">
                             <span class="game__order">Игра № 1</span>
@@ -45,7 +45,7 @@
                     </a>
                 </article>
                 <article class="game__item game__item--maxsize">
-                    <a href="#"> <!--Дополнить якорную ссылку, когда реализую блок Мини-игр -->
+                    <a href="#game4">
                         <img class="game__img" src="./images/fourth_game.jpeg" alt="Четвёртая игра">
                         <div class="game__block">
                             <span class="game__order">Игра №4</span>
@@ -60,7 +60,7 @@
             </div>
             <div class="two-games">
                 <article class="game__item game__item--mediumsize">
-                    <a href="#"> <!--Дополнить якорную ссылку, когда реализую блок Мини-игр -->
+                    <a href="#game2">
                         <img class="game__img" src="./images/second_game.jpeg" alt="Вторая игра">
                         <div class="game__block">
                             <span class="game__order">Игра № 2</span>
@@ -72,7 +72,7 @@
                     </a>
                 </article>                
                 <article class="game__item game__item--mediumsize">
-                    <a href="#"> <!--Дополнить якорную ссылку, когда реализую блок Мини-игр -->
+                    <a href="#game5">
                         <img class="game__img" src="./images/fifth_game.jpeg" alt="Пятая игра">
                         <div class="game__block">
                             <span class="game__order">Игра №5</span>
@@ -86,7 +86,7 @@
             </div>
             <div class="two-games">
                 <article class="game__item game__item--minsize">
-                    <a href="#"> <!--Дополнить якорную ссылку, когда реализую блок Мини-игр -->
+                    <a href="#game3">
                         <img class="game__img" src="./images/third_game.jpeg" alt="Третья игра">
                         <div class="game__block">
                             <span class="game__order">Игра №3</span>
@@ -95,7 +95,7 @@
                     </a>
                 </article>
                 <article class="game__item game__item--maxsize">
-                    <a href="#"> <!--Дополнить якорную ссылку, когда реализую блок Мини-игр -->
+                    <a href="#game6">
                         <img class="game__img" src="./images/sixth_game.jpeg" alt="Шестая игра">
                         <div class="game__block">
                             <span class="game__order">Игра №6</span>
@@ -110,5 +110,77 @@
             </div>
         </div>
     </section>
+    <section class="mini-games center">
+        <div class="mini-games__top-stars"></div>
+        <div class="mini-games__bottom-stars"></div>
+        <h1 class="mini-games__heading">Мини-игры</h1>
+        <div class="game game--flex">
+            <article id="game1" class="game__item game__item--mini-games">
+                <img class="game__img" src="./images/first_game.jpeg" alt="Первая игра">
+                <div class="game__block game__block--mini-games">
+                    <h2 class="game__name game__name--mini-games">Угадай число</h2>
+                    <p class="game__description">Попробуй угадать случайное число от 1 до 100.</p>
+                    <button class="game__btn">Играть!</button>
+                </div>
+            </article>
+            <article id="game2" class="game__item game__item--mini-games game__item--reverse">
+                <img class="game__img" src="./images/second_game.jpeg" alt="Вторая игра">
+                <div class="game__block game__block--mini-games">
+                    <h2 class="game__name game__name--mini-games">
+                        <span class="game__test-transfer">Простая</span>
+                        <span class="game__test-transfer">арифметика</span>
+                    </h2>
+                    <p class="game__description">Попробуй решить простые арифметические задачи.</p>
+                    <button class="game__btn">Играть!</button>
+                </div>
+            </article>
+            <article id="game3" class="game__item game__item--mini-games">
+                <img class="game__img" src="./images/third_game.jpeg" alt="Третья игра">
+                <div class="game__block game__block--mini-games">
+                    <h2 class="game__name game__name--mini-games">Переверни текст</h2>
+                    <p class="game__description">Попробуй ввести текст, который будет перевернут.</p>
+                    <button class="game__btn">Играть!</button>
+                </div>
+            </article>
+            <article id="game4" class="game__item game__item--mini-games game__item--reverse">
+                <img class="game__img" src="./images/fourth_game.jpeg" alt="Четвёртая игра">
+                <div class="game__block game__block--mini-games">
+                    <h2 class="game__name game__name--mini-games">
+                        <span class="game__test-transfer">Камень,</span>
+                        <span class="game__test-transfer">ножницы,</span>
+                        <span class="game__test-transfer">бумага</span>
+                    </h2>
+                    <p class="game__description">Сыграй в популярную игру против компьютера.</p>
+                    <button class="game__btn">Играть!</button>
+                </div>
+            </article>
+            <article id="game5" class="game__item game__item--mini-games">
+                <img class="game__img" src="./images/fifth_game.jpeg" alt="Пятая игра">
+                <div class="game__block game__block--mini-games">
+                    <h2 class="game__name game__name--mini-games">
+                        <span class="game__test-transfer">Простая</span>
+                        <span class="game__test-transfer">викторина</span>
+                    </h2>
+                    <p class="game__description">Отвечай на вопросы викторины с вариантами ответов.</p>
+                    <button class="game__btn">Играть!</button>
+                </div>
+            </article>
+            <article id="game6" class="game__item game__item--mini-games game__item--reverse">
+                <img class="game__img" src="./images/sixth_game.jpeg" alt="Шестая игра">
+                <div class="game__block game__block--mini-games">
+                    <h2 class="game__name game__name--mini-games">
+                        <span>Генератор</span>
+                        <span>случайных</span>
+                        <span>цветов</span>
+                    </h2>
+                    <p class="game__description">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
+                    <button class="game__btn">Играть!</button>
+                </div>
+            </article>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="footer__text">Все права защищены.</p>
+    </footer>
 </body>
 </html>
