@@ -33,5 +33,68 @@
     .game{
         flex-direction: column;
         align-items: center;
+
+        &--flex{
+            gap: 24px;
+        }
+
+        &__item{
+            &--mini-games{
+                width: 343px;
+                height: 100%;
+                flex-direction: column;
+            }
+
+            &--reverse{
+                flex-direction: column;
+            }
+        }
+
+        &__img{
+            display: block;
+            overflow: hidden;
+        }
+
+        &__block{
+            &--mini-games{
+                margin: 29px 29px 33px 29px;
+                display: block;
+                width: 284px;
+            }
+        }
+
+        &__name{
+            &--mini-games{
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+                text-align: left;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__description{
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 32px;
+        }
+
+          &__btn{
+            font-size: 16px;
+            border-radius: 60px;
+            border: none;
+            padding: 16px 110px;
+        }
+
+        &__btn:hover{
+            background-color: $base-color;
+            color: $article-color;
+            border: none;
+        }
+    }
+
+    .mini-games{
+        padding-top: 48px;
+        padding-bottom: 10px;
     }
 }

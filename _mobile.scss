@@ -68,6 +68,10 @@
         }
 
         &__btn{
+            display: none;
+        }
+
+        &__btn-mobile{
             padding: 16px 103px;
             font-size: 16px;
             font-weight: 600;
@@ -75,10 +79,13 @@
             max-width: 285px;
             box-sizing: border-box;
             margin: 0 auto;
-        }
-        &__btn:hover{
-            background-color: $base-color;
+            display: inline-block;
+            background: $base-color;
             color: $article-color;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            line-height: 142%;
         }
     }
 
@@ -88,6 +95,102 @@
 
     .about{
         display: none;
+    }
+
+    .game{
+        &--flex{
+            gap: 24px;
+        }
+
+        &__item{
+            &--mini-games{
+                width: 343px;
+                height: 100%;
+                flex-direction: column;
+            }
+
+            &--reverse{
+                flex-direction: column;
+            }
+        }
+
+        &__img{
+            display: block;
+            overflow: hidden;
+        }
+
+        &__block{
+            &--mini-games{
+                margin: 29px 29px 33px 29px;
+                display: block;
+                width: 284px;
+            }
+        }
+
+        &__name{
+            &--mini-games{
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+                text-align: left;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__description{
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 32px;
+        }
+
+          &__btn{
+            font-size: 16px;
+            border-radius: 60px;
+            border: none;
+            padding: 16px 110px;
+        }
+
+        &__btn:hover{
+            background-color: $base-color;
+            color: $article-color;
+            border: none;
+        }
+    }
+
+    .mini-games{
+        padding-top: 48px;
+        padding-bottom: 10px;
+
+        &__top-stars{
+            &::before, &::after {
+            display: none;
+            }
+        }
+
+        &__bottom-stars{
+            &::before, &::after {
+            display: none;
+            }
+        }
+
+        &__heading{
+            font-size: 40px;
+            line-height: 49px;
+            text-align: left;
+            margin-bottom: 48px;
+            margin-left: -25px;
+        }
+    }
+
+    .footer{
+        height: 100px;
+
+        &__text{
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            padding-top: 40px;
+        }
     }
 }
 
