@@ -139,6 +139,10 @@ button {
     background-color: $article-color;
     color: $base-color;
   }
+
+  &__btn-mobile{
+    display: none;
+  }
 }
 
 .running-line{
