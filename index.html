@@ -6,6 +6,28 @@
     <title>Homework1</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function firstGame(){
+            let num = Math.ceil(Math.random() * 100);
+            // console.log(num); // раскомментировать эту строку для проверки
+            let userNum = Number(prompt(`Введите целое число от 1 до 100`));
+            if (isNaN(userNum)) {
+                alert(`Вы ввели нечисловое значение`);
+            } else {
+                while (userNum != num || userNum === num){
+                    if (userNum > num) {
+                        alert(`Загаданное число меньше введенного Вами`);
+                    } else if (userNum < num) {
+                        alert(`Загаданное число больше введенного Вами`);
+                    } else {
+                        alert(`Вы угадали!`);
+                        break;
+                    }
+                    userNum = Number(prompt(`Введите целое число от 1 до 100`));
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -121,7 +143,7 @@
                 <div class="game__block game__block--mini-games">
                     <h2 class="game__name game__name--mini-games">Угадай число</h2>
                     <p class="game__description">Попробуй угадать случайное число от 1 до 100.</p>
-                    <button class="game__btn">Играть!</button>
+                    <button onclick="firstGame()" class="game__btn">Играть!</button>
                 </div>
             </article>
             <article id="game2" class="game__item game__item--mini-games game__item--reverse">
