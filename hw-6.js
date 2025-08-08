@@ -7,19 +7,16 @@ while (array[i]!== 10 && i < array.length){
 console.log(`array[${i}] = ${array[i]}`);
 
 // Задание 2
-for (let j = 0; j < array.length; j++){
-    if (array[j]=== 4){
-        console.log(`Индекс значения 4 = ${j}`);
-    }
-}
+console.log(`Индекс значения 4 = ${array.indexOf(4)}`);
 
 // Задание 3
 const arr = [1, 3, 5, 10, 20];
 console.log(arr.join(' '));
 
 // Задание 4
-const arr1 = [[], [], []];
+const arr1 = [];
 for (let a = 0; a < 3; a++){
+    arr1.push(new Array(3));
     for (let b = 0; b < 3; b++){
         arr1[a][b] = 1;
     }
@@ -34,7 +31,7 @@ console.log(arr2);
 // Задание 6
 const arr3 = [9, 8, 7, 'a', 6, 5];
 arr3.sort();
-const arr4 = arr3.filter(arr3 => arr3 !== 'a');
+const arr4 = arr3.filter(num => !isNaN(num));
 console.log(arr4);
 
 // Задание 7
@@ -48,9 +45,7 @@ if(arr5.includes(userNumber)){
 
 // Задание 8
 let str = 'abcdef';
-strArray = str.split('');
-str = strArray.reverse();
-console.log(str.join(''));
+console.log(str.split('').reverse().join(''));
 
 // Задание 9
 const arr6 = [[1, 2, 3],[4, 5, 6]];
