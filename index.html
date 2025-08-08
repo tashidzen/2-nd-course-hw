@@ -27,6 +27,43 @@
                 }
             }
         }
+
+        function secondGame(){
+            let countOfRounds = Number(prompt(`Введите количество раундов:`));
+            for (let j = 0; j < countOfRounds; j++){
+                let num1 = Math.ceil(Math.random() * 100);
+                let num2 = Math.ceil(Math.random() * 100);
+                const signs = ['+', '-', '*', '/'];
+                let i = Math.floor(Math.random()*4);
+                let result = 0;
+                switch (i){
+                    case 0: 
+                        result = num1 + num2; 
+                        break;
+                    case 1: 
+                        result = num1 - num2; 
+                        break;
+                    case 2: 
+                        result = num1 * num2; 
+                        break;
+                    case 3:
+                        while (num1 % num2 !== 0){
+                            num1 = Math.ceil(Math.random() * 100);
+                            num2 = Math.ceil(Math.random() * 100);
+                            if (num1 % num2 === 0){
+                                result = num1 / num2; 
+                                break;
+                            }
+                        }
+                }
+                let userResult = Number(prompt(`Сколько будет ${num1} ${signs[i]} ${num2} ? Введите ответ:`));
+                if (userResult === result){
+                    alert(`Верно!`);
+                } else {
+                    alert(`Неверно! Правильный ответ ${result}.`);
+                }
+            }
+        }
     </script>
 </head>
 <body>
@@ -154,7 +191,7 @@
                         <span class="game__test-transfer">арифметика</span>
                     </h2>
                     <p class="game__description">Попробуй решить простые арифметические задачи.</p>
-                    <button class="game__btn">Играть!</button>
+                    <button onclick="secondGame()" class="game__btn">Играть!</button>
                 </div>
             </article>
             <article id="game3" class="game__item game__item--mini-games">
