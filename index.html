@@ -64,6 +64,44 @@
                 }
             }
         }
+
+        function thirdGame(){
+            let userStr = prompt(`Введите текст:`);
+            const arr = userStr.split('');
+            arr.reverse();
+            let reverseStr = arr.join('');
+            alert(`Перевёрнутый текст: ${reverseStr}.`);
+        }
+
+        function fifthGame(){
+        // Массив вопросов и правильных ответов
+            const quiz = [
+                {
+                    question: "Какой цвет у неба?",
+                    options: ["1. Красный", "2. Синий", "3. Зеленый"],
+                    correctAnswer: 2 // номер правильного ответа
+                },
+                {
+                    question: "Сколько дней в неделе?",
+                    options: ["1. Шесть", "2. Семь", "3. Восемь"],
+                    correctAnswer: 2
+                },
+                {
+                    question: "Сколько у человека пальцев на одной руке?",
+                    options: ["1. Четыре", "2. Пять", "3. Шесть"],
+                    correctAnswer: 2
+                }
+            ];
+            
+            let correct = 0;
+            for (i  = 0; i < quiz.length; i++){
+                let userAnswer = Number(prompt(`Введите номер (цифрой) правильного ответа на вопрос "${quiz[i].question}". Варианты ответов: ${quiz[i].options}`));
+                if(userAnswer === quiz[i].correctAnswer){
+                    correct++;
+                }
+            }
+            alert(`Количество правильных ответов = ${correct}`);
+        }
     </script>
 </head>
 <body>
@@ -199,7 +237,7 @@
                 <div class="game__block game__block--mini-games">
                     <h2 class="game__name game__name--mini-games">Переверни текст</h2>
                     <p class="game__description">Попробуй ввести текст, который будет перевернут.</p>
-                    <button class="game__btn">Играть!</button>
+                    <button onclick="thirdGame()" class="game__btn">Играть!</button>
                 </div>
             </article>
             <article id="game4" class="game__item game__item--mini-games game__item--reverse">
@@ -211,7 +249,7 @@
                         <span class="game__test-transfer">бумага</span>
                     </h2>
                     <p class="game__description">Сыграй в популярную игру против компьютера.</p>
-                    <button class="game__btn">Играть!</button>
+                    <button onclick="fourthGame()" class="game__btn">Играть!</button>
                 </div>
             </article>
             <article id="game5" class="game__item game__item--mini-games">
@@ -222,7 +260,7 @@
                         <span class="game__test-transfer">викторина</span>
                     </h2>
                     <p class="game__description">Отвечай на вопросы викторины с вариантами ответов.</p>
-                    <button class="game__btn">Играть!</button>
+                    <button onclick="fifthGame()" class="game__btn">Играть!</button>
                 </div>
             </article>
             <article id="game6" class="game__item game__item--mini-games game__item--reverse">
