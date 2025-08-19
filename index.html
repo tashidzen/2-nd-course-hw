@@ -73,6 +73,29 @@
             alert(`Перевёрнутый текст: ${reverseStr}.`);
         }
 
+        function fourthGame(){
+            let userChoice = prompt("Введите свой выбор: камень, ножницы или бумага?");
+            userChoice = userChoice.toLowerCase();
+            if (userChoice !== "камень" && userChoice !== "ножницы" && userChoice !== "бумага"){
+                confirm("Введено отличное от предложенного выбора значение.");
+                return;
+            }
+
+            array = ["камень", "ножницы", "бумага"];
+            let index = Math.floor(Math.random() * 3);
+            let computerChoice = array[index];
+
+            if (userChoice === computerChoice){
+                alert(`Ваш выбор: ${userChoice}, выбор соперника: ${computerChoice}. У вас ничья!`)
+            } else if ((userChoice === "камень" && computerChoice === "ножницы") || 
+                       (userChoice === "ножницы" && computerChoice === "бумага") ||
+                       (userChoice === "бумага" && computerChoice === "камень")) {
+                alert(`Ваш выбор: ${userChoice}, выбор соперника: ${computerChoice}. Вы выиграли!`)
+            } else {
+                alert(`Ваш выбор: ${userChoice}, выбор соперника: ${computerChoice}. Вы проиграли :(`)
+            }
+        }
+
         function fifthGame(){
         // Массив вопросов и правильных ответов
             const quiz = [
@@ -135,7 +158,7 @@
             <div class="two-games">
                 <article class="game__item game__item--minsize">
                     <a href="#game1">
-                        <img class="game__img" src="./images/first_game.jpeg" alt="Первая игра">
+                        <img class="game__img" src="./images/first_game.svg" alt="Первая игра">
                         <div class="game__block">
                             <span class="game__order">Игра № 1</span>
                             <h2 class="game__name">Угадай число</h2>
@@ -144,7 +167,7 @@
                 </article>
                 <article class="game__item game__item--maxsize">
                     <a href="#game4">
-                        <img class="game__img" src="./images/fourth_game.jpeg" alt="Четвёртая игра">
+                        <img class="game__img" src="./images/fourth_game.jpg" alt="Четвёртая игра">
                         <div class="game__block">
                             <span class="game__order">Игра №4</span>
                             <h2 class="game__name">
@@ -159,7 +182,7 @@
             <div class="two-games">
                 <article class="game__item game__item--mediumsize">
                     <a href="#game2">
-                        <img class="game__img" src="./images/second_game.jpeg" alt="Вторая игра">
+                        <img class="game__img" src="./images/second_game.svg" alt="Вторая игра">
                         <div class="game__block">
                             <span class="game__order">Игра № 2</span>
                             <h2 class="game__name">
@@ -171,7 +194,7 @@
                 </article>                
                 <article class="game__item game__item--mediumsize">
                     <a href="#game5">
-                        <img class="game__img" src="./images/fifth_game.jpeg" alt="Пятая игра">
+                        <img class="game__img" src="./images/fifth_game.svg" alt="Пятая игра">
                         <div class="game__block">
                             <span class="game__order">Игра №5</span>
                             <h2 class="game__name">
@@ -185,7 +208,7 @@
             <div class="two-games">
                 <article class="game__item game__item--minsize">
                     <a href="#game3">
-                        <img class="game__img" src="./images/third_game.jpeg" alt="Третья игра">
+                        <img class="game__img" src="./images/third_game.svg" alt="Третья игра">
                         <div class="game__block">
                             <span class="game__order">Игра №3</span>
                             <h2 class="game__name">Переверни текст</h2>
@@ -194,7 +217,7 @@
                 </article>
                 <article class="game__item game__item--maxsize">
                     <a href="#game6">
-                        <img class="game__img" src="./images/sixth_game.jpeg" alt="Шестая игра">
+                        <img class="game__img" src="./images/sixth_game.svg" alt="Шестая игра">
                         <div class="game__block">
                             <span class="game__order">Игра №6</span>
                             <h2 class="game__name">
@@ -214,7 +237,7 @@
         <h1 class="mini-games__heading">Мини-игры</h1>
         <div class="game game--flex">
             <article id="game1" class="game__item game__item--mini-games">
-                <img class="game__img" src="./images/first_game.jpeg" alt="Первая игра">
+                <img class="game__img" src="./images/first_game.svg" alt="Первая игра">
                 <div class="game__block game__block--mini-games">
                     <h2 class="game__name game__name--mini-games">Угадай число</h2>
                     <p class="game__description">Попробуй угадать случайное число от 1 до 100.</p>
@@ -222,7 +245,7 @@
                 </div>
             </article>
             <article id="game2" class="game__item game__item--mini-games game__item--reverse">
-                <img class="game__img" src="./images/second_game.jpeg" alt="Вторая игра">
+                <img class="game__img" src="./images/second_game.svg" alt="Вторая игра">
                 <div class="game__block game__block--mini-games">
                     <h2 class="game__name game__name--mini-games">
                         <span class="game__test-transfer">Простая</span>
@@ -233,7 +256,7 @@
                 </div>
             </article>
             <article id="game3" class="game__item game__item--mini-games">
-                <img class="game__img" src="./images/third_game.jpeg" alt="Третья игра">
+                <img class="game__img" src="./images/third_game.svg" alt="Третья игра">
                 <div class="game__block game__block--mini-games">
                     <h2 class="game__name game__name--mini-games">Переверни текст</h2>
                     <p class="game__description">Попробуй ввести текст, который будет перевернут.</p>
@@ -241,7 +264,7 @@
                 </div>
             </article>
             <article id="game4" class="game__item game__item--mini-games game__item--reverse">
-                <img class="game__img" src="./images/fourth_game.jpeg" alt="Четвёртая игра">
+                <img class="game__img" src="./images/fourth_game.jpg" alt="Четвёртая игра">
                 <div class="game__block game__block--mini-games">
                     <h2 class="game__name game__name--mini-games">
                         <span class="game__test-transfer">Камень,</span>
@@ -253,7 +276,7 @@
                 </div>
             </article>
             <article id="game5" class="game__item game__item--mini-games">
-                <img class="game__img" src="./images/fifth_game.jpeg" alt="Пятая игра">
+                <img class="game__img" src="./images/fifth_game.svg" alt="Пятая игра">
                 <div class="game__block game__block--mini-games">
                     <h2 class="game__name game__name--mini-games">
                         <span class="game__test-transfer">Простая</span>
@@ -264,7 +287,7 @@
                 </div>
             </article>
             <article id="game6" class="game__item game__item--mini-games game__item--reverse">
-                <img class="game__img" src="./images/sixth_game.jpeg" alt="Шестая игра">
+                <img class="game__img" src="./images/sixth_game.svg" alt="Шестая игра">
                 <div class="game__block game__block--mini-games">
                     <h2 class="game__name game__name--mini-games">
                         <span>Генератор</span>
